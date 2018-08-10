@@ -17,7 +17,6 @@ func main() {
 		conn := db.Connect("sqlite3", "main.db")
 		defer conn.Close()
 
-		//test
 		conn.AutoMigrate(&dto.Task{}, &dto.WorkDay{})
 	} else {
 		println("Database not created!")
